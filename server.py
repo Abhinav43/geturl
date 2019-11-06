@@ -1,5 +1,6 @@
 from flask import Flask,request,jsonify
 from flask_cors import CORS
+import random
 # from chatter import chat
 from get_ur import get_url
 
@@ -14,7 +15,7 @@ app = Flask(__name__)
 def _predict():
     query = request.json["reply"]
     try:
-        result = chat(query)
+        result = get_url(query)
         return jsonify({"prediction" : result})
     except Exception as e:
         print(e)
