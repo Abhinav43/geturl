@@ -2,6 +2,7 @@ import requests
 import os
 import json
 import time
+import random
 
 import giphy_client
 from giphy_client.rest import ApiException
